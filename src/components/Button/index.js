@@ -1,3 +1,4 @@
+import propsTypes from 'prop-types';
 import classNames from 'classnames/bind';
 import { Link } from 'react-router-dom';
 import styles from './Button.module.scss';
@@ -6,7 +7,7 @@ const cx = classNames.bind(styles);
 
 function Button({
     to,
-    herf,
+    href,
     primary = false,
     outline = false,
     text = false,
@@ -39,8 +40,8 @@ function Button({
     if (to) {
         props.to = to;
         Comp = Link;
-    } else if (herf) {
-        props.herf = herf;
+    } else if (href) {
+        props.href = href;
         Comp = 'a';
     }
 
@@ -65,5 +66,9 @@ function Button({
         </Comp>
     );
 }
+
+Button.propsTypes = {
+    children: propsTypes.node.isRequired,
+};
 
 export default Button;
