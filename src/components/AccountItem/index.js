@@ -1,4 +1,4 @@
-import PropsType from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './AccountItem.module.scss';
 import classNames from 'classnames/bind';
 import Image from '../Images';
@@ -23,8 +23,8 @@ function AccountItem({ data }) {
     );
 }
 
-AccountItem.PropsType = {
-    data: PropsType.object,
+AccountItem.propTypes = {
+    data: PropTypes.object.isRequired,
 };
 
 export default AccountItem;
