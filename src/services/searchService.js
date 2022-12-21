@@ -1,8 +1,8 @@
-import * as request from '~/ulits/request';
+import * as httpRequest from '~/ulits/httpRequest';
 
 export const search = async (q, type = 'less') => {
     try {
-        const res = await request.get('users/search', {
+        const res = await httpRequest.get('users/search', {
             params: {
                 q,
                 type,
